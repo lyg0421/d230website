@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>港都饗宴</title>
+<style type="text/css">
+#container {
+	width: 1280px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#header {
+	height: 150px;
+	width: 1280px;
+}
+#artical {
+	float: left;
+	height: 600px;
+	width: 1000px;
+}
+#item {
+	float: right;
+	height: 600px;
+	width: 280px;
+}
+#footer {
+	float: left;
+	height: 50px;
+	width: 1280px;
+}
+</style>
+<link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css">
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="container">
+  <div id="header"><img src="images/01Feast.jpg" width="1280" height="150"></div>
+  <div id="artical"></div>
+  <div id="item">
+    <ul id="MenuBar1" class="MenuBarVertical">
+      <li><a href="feast.html">港都饗宴</a>      </li>
+      <li><a href="Fashion.html">港都時尚</a></li>
+      <li><a href="Tour.html">港都漫遊</a>      </li>
+      <li><a href="aboutme.html">關於我</a></li>
+      <li><a href="contact.html">與我聯繫</a></li>
+      <li><a href="index.html">回首頁</a></li>
+    </ul>
+  </div>
+  <div id="footer"><img src="images/01footer.jpg" width="1280" height="50"></div>
+</div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>
