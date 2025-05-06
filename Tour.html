@@ -42,9 +42,14 @@
 </style>
 <link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css">
 <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryEffects.js" type="text/javascript"></script>
 <script type="text/javascript">
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
+}
+function MM_effectAppearFade(targetElement, duration, from, to, toggle)
+{
+	Spry.Effect.DoFade(targetElement, {duration: duration, from: from, to: to, toggle: toggle});
 }
 </script>
 </head>
@@ -65,10 +70,10 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
         <p data-start="35" data-end="83"><span class="textstyle">資訊網站：<a href="https://pier2.org/about/">駁二藝術特區</a><a href="#top">top</a></span></p></td>
       </tr>
       <tr>
-        <td width="226"><div align="center"><span class="textstyle"><img src="images/19.jpg" width="199" height="133" onClick="MM_openBrWindow('images/19big.jpg','','width=800,height=600')"></span></div></td>
-        <td width="249"><div align="center"><span class="textstyle"><img src="images/20.jpg" width="199" height="133" onClick="MM_openBrWindow('images/20big.jpg','','width=800,height=600')"></span></div></td>
-        <td width="257"><div align="center"><span class="textstyle"><img src="images/21.jpg" width="200" height="133" onClick="MM_openBrWindow('images/21big.jpg','','width=800,height=600')"></span></div></td>
-        <td width="242"><div align="center"><span class="textstyle"><img src="images/22.jpg" width="200" height="133" onClick="MM_openBrWindow('images/22big.jpg','','width=800,height=600')"></span></div></td>
+        <td width="226"><div align="center"><span class="textstyle"><img src="images/19.jpg" width="199" height="133" onClick="MM_openBrWindow('images/19big.jpg','','width=800,height=600')" onMouseOver="MM_effectAppearFade(this, 1000, 50, 100, false)"></span></div></td>
+        <td width="249"><div align="center"><span class="textstyle"><img src="images/20.jpg" width="199" height="133" onClick="MM_openBrWindow('images/20big.jpg','','width=800,height=600')" onMouseOver="MM_effectAppearFade(this, 1000, 50, 100, false)"></span></div></td>
+        <td width="257"><div align="center"><span class="textstyle"><img src="images/21.jpg" width="200" height="133" onClick="MM_openBrWindow('images/21big.jpg','','width=800,height=600')" onMouseOver="MM_effectAppearFade(this, 1000, 50, 100, false)"></span></div></td>
+        <td width="242"><div align="center"><span class="textstyle"><img src="images/22.jpg" width="200" height="133" onClick="MM_openBrWindow('images/22big.jpg','','width=800,height=600')" onMouseOver="MM_effectAppearFade(this, 1000, 50, 100, false)"></span></div></td>
       </tr>
       <tr>
         <td colspan="4"><div align="center" class="titlestyle"><a id="b02"></a>逍遙園</div></td>
