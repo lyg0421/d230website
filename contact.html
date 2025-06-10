@@ -39,21 +39,71 @@
 	font-size: 18px;
 	color: #000;
 }
+.form1{
+	boder-radius:5;
+	font-size:24px;
+	margin-top:50px;
+	margin-left:80px;
+}
+.button {
+	font-size:24px;
+	background-color:#D0D0D0;
+	border-radius:10px;
+}
 </style>
 <link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css">
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
 <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
 </head>
 
 <body>
 <div id="container">
   <div id="header"><img src="images/01contact.jpg" width="1280" height="150"></div>
   <div id="artical">
-    <form name="form1" method="post" action="">
-      <p>姓名：
-        <label for="textfield"></label>
-      <input type="text" name="textfield" id="textfield">
+    <form name="form1" method="post" action="" class="form1">
+      <p>姓名:<span id="sprytextfield1">
+      <label for="text1"></label>
+      <input type="text" name="text1" id="text1">
+      <span class="textfieldRequiredMsg">需要有一個值。</span></span></p>
+      <p>型別:
+        <input name="radio" type="radio" id="radio" value="radio" checked>
+        <label for="radio">男</label>
+        <input type="radio" name="radio" id="radio2" value="radio2">
+        <label for="radio2">女</label>
       </p>
-      <p>&nbsp;</p>
+      <p>職業:
+            <select name="select" id="select">
+              <option>學生</option>
+              <option>軍公教</option>
+              <option>商業</option>
+              <option>工業</option>
+              <option>自由業</option>
+            </select>
+      </p>
+      <p>回覆時間:
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">早上</label>
+        <input type="checkbox" name="checkbox2" id="checkbox2">
+        <label for="checkbox2">中午</label>
+        <input type="checkbox" name="checkbox3" id="checkbox3">
+        <label for="checkbox3">晚上</label>
+      </p>
+      <p>電子郵件:<span id="sprytextfield2">
+      <label for="text2"></label>
+      <input type="text" name="text2" id="text2">
+      <span class="textfieldRequiredMsg">需要有一個值。</span><span class="textfieldInvalidFormatMsg">格式無效。</span></span></p>
+      <p>填寫日期:
+      	<label for = "dt"></label>
+        <input type = "date" name = "dt" id = "dt"></p>
+      <p>詢問內容:
+        <label for="textarea"></label>
+        <textarea name="textarea" cols="45" rows="6" id="textarea"></textarea>
+      </p>
+      <p>
+        <input type="submit" name="button" class="button" value="送出">
+        <input type="reset" name="button2" class="button" value="重設">
+      </p>
     </form>
   </div>
   <div id="item">
@@ -66,10 +116,13 @@
       <li><a href="index.html">回首頁</a></li>
     </ul>
   </div>
+  <iframe src="test.html" width="900" height="400" frameborder="0" scrolling="no"></iframe>
   <div id="footer"><img src="images/01footer.jpg" width="1280" height="50"></div>
 </div>
 <script type="text/javascript">
 var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "none");
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "email");
 </script>
 </body>
 </html>
